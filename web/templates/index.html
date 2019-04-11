@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>models</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style_models.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col d-print-none col-sm-3 col-4" id="myScrollspy">
+                <ul class="nav nav-pills flex-column">
+                    <li class="nav-item"><a class="nav-link active" href="#section1">سوال اول</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section2">سوال دوم</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section3">سوال سوم</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section4">سوال چهارم</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#section5">سوال پنجم</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <div class="col-sm-9 col-8">
+                    <div id="section1" class="bg-success">
+                        <div class="table-responsive text-center d-sm-flex align-items-sm-center">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-primary shadow-lg">
+                                            <h1>همه ی نویسندگان یک کتاب را نمایش بده</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{view_book_authors}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="section2" class="bg-warning">
+                        <div class="table-responsive text-center d-sm-flex align-items-sm-center">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-info shadow-lg">
+                                            <h1>اسم کتاب را نمایش بده</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{view_title_book}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="section3" class="bg-secondary">
+                        <div class="table-responsive text-center d-sm-flex align-items-sm-center">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-light shadow-lg">
+                                            <h1>وب سایت ناشر کتاب را نشان بده</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{view_website_publisher}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="section4" class="bg-danger">
+                        <div class="table-responsive text-center d-sm-flex align-items-sm-center">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-light shadow-lg">
+                                            <h1>همه ی کتاب های یک ناشر را نشان بده</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{view_publisher_books}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="section5" class="bg-info">
+                        <div class="table-responsive text-center d-sm-flex align-items-sm-center">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="bg-light shadow-lg">
+                                            <h1>یک نویسنده چند تا کتاب مختلف تولید کرده؟</h1>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{{view_author_books}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+</body>
+
+</html>
